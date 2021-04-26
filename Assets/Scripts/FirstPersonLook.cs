@@ -6,13 +6,18 @@ public class FirstPersonLook : MonoBehaviour
 {
     public float lookSpeed = 3;
     private Vector2 rotation = Vector2.zero;
+    public Rect crosshairRect;
+    public float size = 0.05f;
 
     public bool isPlaying = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        float crosshairSize = Screen.width * size;
+        crosshairRect = new Rect(Screen.width / 2 - crosshairSize / 2,
+                                  Screen.height / 2 - crosshairSize / 2,
+                                  crosshairSize, crosshairSize);
     }
 
     // Update is called once per frame
