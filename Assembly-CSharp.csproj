@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FirstPersonLook.cs" />
     <Compile Include="Assets\Scripts\FirstPersonMove.cs" />
+    <Compile Include="Assets\Scripts\HealthBarstoCamera.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\gunScript.cs" />
     <None Include="Assets\SciFi Modular Map\Readme_Please.txt" />
