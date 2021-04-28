@@ -9,6 +9,8 @@ public class projectileGunScript : MonoBehaviour
     public int ammo;
     public Text ammoCount;
 
+    public bool debugLaser = false;
+
     public float speed = 20;
 
     void Start()
@@ -19,7 +21,7 @@ public class projectileGunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Aim(); //Laser for Debuging Aim from gunBarrel Position
+        if (debugLaser) Aim(); //Laser for Debuging Aim from gunBarrel Position
 
         ammoCount.text = ammo.ToString() + "/" + maxAmmo.ToString();
 
