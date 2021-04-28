@@ -1,4 +1,4 @@
-﻿
+﻿//Hit Scan//
 using UnityEngine;
 using UnityEngine.UI;
 
