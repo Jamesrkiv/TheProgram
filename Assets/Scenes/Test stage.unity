@@ -1073,7 +1073,7 @@ PrefabInstance:
     - target: {fileID: 2396264112012832747, guid: 1be6e68bb95ea38418dfd4fd5b7d4fa8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6530839514640254471, guid: 1be6e68bb95ea38418dfd4fd5b7d4fa8,
         type: 3}
@@ -1175,10 +1175,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.41
       objectReference: {fileID: 0}
+    - target: {fileID: 8166750623115002573, guid: 3350384b76dfcbd46bab4b3e683120bf,
+        type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166750623115002573, guid: 3350384b76dfcbd46bab4b3e683120bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8166750623115002574, guid: 3350384b76dfcbd46bab4b3e683120bf,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166750623115002609, guid: 3350384b76dfcbd46bab4b3e683120bf,
+        type: 3}
+      propertyPath: dashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166750623115002609, guid: 3350384b76dfcbd46bab4b3e683120bf,
+        type: 3}
+      propertyPath: dashCooldown
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8166750623115002610, guid: 3350384b76dfcbd46bab4b3e683120bf,
         type: 3}

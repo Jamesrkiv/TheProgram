@@ -25,7 +25,7 @@ public class projectileGunScript : MonoBehaviour
 
         ammoCount.text = ammo.ToString() + "/" + maxAmmo.ToString();
 
-        if (Input.GetButtonDown("Fire1") && (ammo > 0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (ammo > 0))
         { 
             ammo--;
             fireWeapon();
