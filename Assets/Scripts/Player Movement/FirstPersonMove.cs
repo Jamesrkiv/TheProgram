@@ -34,7 +34,7 @@ public class FirstPersonMove : MonoBehaviour
 
 		Vector3 forward = transform.forward * v * speed * Time.deltaTime; // Vector3 for movement
 		Vector3 sideways = transform.right * h * speed * Time.deltaTime;
-		Vector3 grav = new Vector3(0, -gravity, 0); // Gravity
+		Vector3 grav = new Vector3(0, -0.1f, 0); // Gravity
 
 		moveDir = new Vector3(h, 0, v);
 		moveDir = transform.TransformDirection(moveDir);
@@ -44,12 +44,14 @@ public class FirstPersonMove : MonoBehaviour
 		{
 			if (charContr.isGrounded) // On ground
 			{
+				jumpVect.y = 0;
 				charContr.Move(forward + sideways + grav); // Moves object (player)
 			}
 
 			if (!charContr.isGrounded) // In air
 			{
 				charContr.Move(forward + sideways + (jumpVect * Time.deltaTime));
+				
 				jumpVect.y -= gravity * Time.deltaTime;
 			}
 
