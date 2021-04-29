@@ -4,7 +4,7 @@ using UnityEngine;
 public class projectileGunScript : MonoBehaviour
 {
     public GameObject projectilePrefab; //Bullet prefab
-    public Transform gunBarrel; //Gun barrel Position
+    public GameObject gunBarrel; //Gun barrel Position
     public int maxAmmo;
     public int ammo;
     public Text ammoCount;
@@ -34,7 +34,7 @@ public class projectileGunScript : MonoBehaviour
 
     void fireWeapon()
     {
-        GameObject bullet = Instantiate(projectilePrefab, gunBarrel.position, gunBarrel.rotation);
+        GameObject bullet = Instantiate(projectilePrefab, gunBarrel.transform.position, gunBarrel.transform.rotation);
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * speed * Time.deltaTime);
     }
 
@@ -42,7 +42,7 @@ public class projectileGunScript : MonoBehaviour
     void Aim()
     {
         Vector3 screenCenter = transform.TransformDirection(Vector3.forward) * 100;
-        Debug.DrawRay(gunBarrel.position, screenCenter, Color.green);
+        Debug.DrawRay(gunBarrel.transform.position, screenCenter, Color.green);
     }
 }
 
