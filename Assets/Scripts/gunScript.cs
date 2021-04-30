@@ -21,11 +21,18 @@ public class gunScript : MonoBehaviour
     {
         ammoCount.text = ammo.ToString() + "/" + maxAmmo.ToString();
 
+        
         if (Input.GetButton("Fire1") && (Time.time >= nextTimeToFire) && (ammo > 0))
         {
             ammo--;
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+        }
+
+        if (ammo == 0)
+        {
+            ammoCount.color = Color.red;
+            Debug.Log("Out of ammo");
         }
     }
     void Shoot()
@@ -46,5 +53,10 @@ public class gunScript : MonoBehaviour
             GameObject impactObject = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactObject, 1f);
         }
+    }
+
+    void Reload()
+    {
+        //ammo = 
     }
 }

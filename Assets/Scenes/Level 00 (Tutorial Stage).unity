@@ -4807,10 +4807,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player + UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7336828425086872211, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8c88e0b6fa7f253429cda3508cd06011,
+        type: 3}
     - target: {fileID: 7336828425135037624, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336828425135037627, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7336828425710478024, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
         type: 3}
