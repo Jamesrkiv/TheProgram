@@ -13,39 +13,50 @@ public class PlayerWeapons : MonoBehaviour
     private GameObject randomGun;
 
     public Animator ammoBlink;
+    private bool hasGun = false;
 
     private void Awake()
     {
         RandomStartGun();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        ammo.text = ammoCount.ToString() + "/" + maxAmmo.ToString();
-        if (ammoCount <= 0)
+        if (ammoCount == 1)
+        {
+            hasGun = false;
+        }
+        else if (hasGun == false && ammoCount <= 0)
         {
             Destroy(randomGun);
             StartCoroutine(RandomGunSelect());
-            ammoCount = 1;
-
+            ammoBlink.SetBool("new weapon", true);
+            ammo.text = "0/" + maxAmmo.ToString();
         }
+    }
+
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        if(hasGun == true)
+            ammo.text = ammoCount.ToString() + "/" + maxAmmo.ToString();
     }
 
     void RandomStartGun()
     {
+        hasGun = true;
         randomGun = Instantiate(weapons[Random.Range(0, weapons.Length)], transform.position, transform.rotation);
         randomGun.transform.parent = gameObject.transform;
     }
 
     IEnumerator RandomGunSelect()
-    {
-            yield return new WaitForSeconds(Random.Range(.5f, 2.5f));
-            randomGun = Instantiate(weapons[Random.Range(0, weapons.Length)], transform.position, transform.rotation);
-            randomGun.transform.parent = gameObject.transform;
-            ammoCount += Random.Range(10, maxAmmo);
-            ammoBlink.SetBool("new weapon", true);
-            yield return new WaitForSeconds(.5f);
-            ammoBlink.SetBool("new weapon", false);
+    {   
+        hasGun = true;
+        yield return new WaitForSeconds(Random.Range(.5f, 2.5f));
+        randomGun = Instantiate(weapons[Random.Range(0, weapons.Length)], transform.position, transform.rotation);
+        randomGun.transform.parent = gameObject.transform;
+        ammoCount += Random.Range(10, maxAmmo);
+        yield return new WaitForSeconds(.5f);
+        ammoBlink.SetBool("new weapon", false);
     }
 }
