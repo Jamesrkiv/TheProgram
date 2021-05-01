@@ -12,6 +12,8 @@ public class PlayerWeapons : MonoBehaviour
 
     private GameObject randomGun;
 
+    public Animator ammoBlink;
+
     private void Awake()
     {
         RandomStartGun();
@@ -42,5 +44,8 @@ public class PlayerWeapons : MonoBehaviour
             randomGun = Instantiate(weapons[Random.Range(0, weapons.Length)], transform.position, transform.rotation);
             randomGun.transform.parent = gameObject.transform;
             ammoCount += Random.Range(10, maxAmmo);
+            ammoBlink.SetBool("new weapon", true);
+            yield return new WaitForSeconds(.5f);
+            ammoBlink.SetBool("new weapon", false);
     }
 }
