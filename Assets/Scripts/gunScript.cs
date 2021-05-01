@@ -55,8 +55,4 @@ public class gunScript : MonoBehaviour
         }
     }
 
-    void Reload()
-    {
-        //ammo = 
-    }
 }
