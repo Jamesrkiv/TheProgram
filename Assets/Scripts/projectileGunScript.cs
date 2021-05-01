@@ -5,17 +5,14 @@ public class projectileGunScript : MonoBehaviour
 {
     public GameObject projectilePrefab; //Bullet prefab
     public GameObject gunBarrel; //Gun barrel Position
-    public int maxAmmo;
-    public int ammo;
-    public Text ammoCount;
 
     public bool debugLaser = false;
+    private PlayerWeapons gunBelt;
 
     public float speed = 20;
-
-    void Start()
+    private void Start()
     {
-
+        gunBelt = GetComponentInParent<PlayerWeapons>();
     }
 
     // Update is called once per frame
@@ -23,17 +20,15 @@ public class projectileGunScript : MonoBehaviour
     {
         if (debugLaser) Aim(); //Laser for Debuging Aim from gunBarrel Position
 
-        ammoCount.text = ammo.ToString() + "/" + maxAmmo.ToString();
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (ammo > 0))
-        { 
-            ammo--;
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             fireWeapon();
         }
     }
 
     void fireWeapon()
     {
+        gunBelt.ammoCount -= 1;
         GameObject bullet = Instantiate(projectilePrefab, gunBarrel.transform.position, gunBarrel.transform.rotation);
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * speed * Time.deltaTime);
     }

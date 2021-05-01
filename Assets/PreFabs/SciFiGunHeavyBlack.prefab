@@ -96,10 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2977346654394215605, guid: cf04be92456063440b9dc2f3fa9fd9d5,
     type: 3}
-  gunBarrel: {fileID: 1260005130341017713}
-  maxAmmo: 30
-  ammo: 30
-  ammoCount: {fileID: 0}
+  gunBarrel: {fileID: 7377102403556160317}
   debugLaser: 0
   speed: 20
 --- !u!1 &7377102403556160317
@@ -126,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7377102403556160317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0010004044, y: 0.049, z: 0.5949998}
+  m_LocalPosition: {x: 0.0010004044, y: 0.049, z: 0.596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467766}
@@ -167,7 +164,7 @@ PrefabInstance:
     - target: {fileID: 6530839514640254471, guid: 1be6e68bb95ea38418dfd4fd5b7d4fa8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.577
+      value: 0.5032
       objectReference: {fileID: 0}
     - target: {fileID: 6530839514640254471, guid: 1be6e68bb95ea38418dfd4fd5b7d4fa8,
         type: 3}

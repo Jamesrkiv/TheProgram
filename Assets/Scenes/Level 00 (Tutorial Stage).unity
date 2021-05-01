@@ -4747,6 +4747,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3870176203248003669, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3870176203248003669, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+        type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 108886, guid: df804c49be2c3cf4a90d773eb9565e13, type: 3}
+    - target: {fileID: 3870176203248003669, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+        type: 3}
+      propertyPath: weapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 138408, guid: a66d64962dad7b441b895147b3616981, type: 3}
     - target: {fileID: 7336828424841605448, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -4827,6 +4842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336828426571895334, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f4a5d6f70f92e4ebf8d772b7818a14, type: 3}
