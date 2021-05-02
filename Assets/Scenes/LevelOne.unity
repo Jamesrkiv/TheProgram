@@ -2880,6 +2880,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1239326552, guid: 3de438e70702ebf428d028c739828f43, type: 3}
+      propertyPath: sightDist
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239326552, guid: 3de438e70702ebf428d028c739828f43, type: 3}
+      propertyPath: attackDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5801954310670395904, guid: 3de438e70702ebf428d028c739828f43,
         type: 3}
       propertyPath: m_AnchorMax.x

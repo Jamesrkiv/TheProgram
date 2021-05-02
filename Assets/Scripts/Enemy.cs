@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     }
 
     public Status status;
+
+    public int attackDistance = 4;
     
     // Start is called before the first frame update
     void Start()
@@ -95,5 +97,13 @@ public class Enemy : MonoBehaviour
         transform.LookAt(targetPlayer.transform.position);
         transform.position += transform.forward * speed * Time.deltaTime;
         anim.SetBool("See player", true);
+        if (Vector3.Distance(transform.position, targetPlayer.transform.position) < attackDistance)
+        {
+            anim.SetBool("In range", true);
+        }
+        else
+        {
+            anim.SetBool("In range", false);
+        }
     }
 }
