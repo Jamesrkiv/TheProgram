@@ -24,6 +24,7 @@ public class FirstPersonLook : MonoBehaviour
     void Update()
     {
         if (isPlaying) Cursor.lockState = CursorLockMode.Locked; // Locks the mouse
+        else Cursor.lockState = CursorLockMode.None;
 
         rotation.y += Input.GetAxis("Mouse X");
         rotation.x += -Input.GetAxis("Mouse Y");

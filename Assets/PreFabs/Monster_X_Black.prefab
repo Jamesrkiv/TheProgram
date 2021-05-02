@@ -1421,9 +1421,10 @@ GameObject:
   - component: {fileID: 722130156}
   - component: {fileID: 722130154}
   - component: {fileID: 722130155}
+  - component: {fileID: 1239326552}
   m_Layer: 0
   m_Name: Monster_X_Black
-  m_TagString: Enemy1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1493,10 +1494,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 6.317433
-  m_Height: 41.353966
+  m_Radius: 12.285522
+  m_Height: 40.51521
   m_Direction: 1
-  m_Center: {x: 0, y: 20.17699, z: -5.8174334}
+  m_Center: {x: -0.0000000051887494, y: 20.596336, z: 0.15065223}
 --- !u!114 &722130155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,6 +1512,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   slider: {fileID: 1888637453239715996}
+--- !u!114 &1239326552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48cbc518c109b342b092824f64952dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  heightMultiplier: 0
+  sightDist: 50
+  targetPlayer: {fileID: 0}
+  status: 0
 --- !u!1 &755520954149700366
 GameObject:
   m_ObjectHideFlags: 0

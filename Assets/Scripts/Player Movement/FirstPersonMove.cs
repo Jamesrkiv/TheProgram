@@ -79,6 +79,8 @@ public class FirstPersonMove : MonoBehaviour
 			}
 		}
 		if (timer >= 0) timer -= Time.deltaTime;
+
+		if (!canMove) charContr.Move(new Vector3(0, 0, 0)); // Stops movement
 	}
 	private IEnumerator DashCoroutine()
     {
