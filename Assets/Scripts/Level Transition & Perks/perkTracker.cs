@@ -17,14 +17,23 @@ public class perkTracker : MonoBehaviour
     public float dashDist = 0f;     // Dash distance bonus
     public float gravReduct = 0f;   // Gravity reduction(/addition)
 
+    public float startingHP = 0f;        // HP for player to start at next level
+
     public GameObject perkTrackerObj;
+
+    public GameObject player;
+    private FirstPersonMove playerMove;
+    private PlayerHealth playerHlth;
 
     private string refSceneName;    // For tracking the current scene
     private string sceneName;       // against the recorded name
+    private float maxHP = 100;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player"); // Finds player gameobject
+
         DontDestroyOnLoad(perkTrackerObj);
         refSceneName = SceneManager.GetActiveScene().name;
         sceneName = SceneManager.GetActiveScene().name;
@@ -39,6 +48,7 @@ public class perkTracker : MonoBehaviour
         {
             Debug.Log("New scene detected!");
             refSceneName = SceneManager.GetActiveScene().name;
+            player = GameObject.Find("Player"); // Finds player gameobject
             applyPerks();
         }
     }
@@ -46,6 +56,15 @@ public class perkTracker : MonoBehaviour
     // Applies bonus attributes to player
     void applyPerks()
     {
+        playerMove = player.GetComponent<FirstPersonMove>();
+        playerHlth = player.GetComponent<PlayerHealth>();
 
+        maxHP = 100 + hpBonus; // Changes max HP
+        playerMove.speed += speedBonus; // Speed bonus
+        if (startingHP <= maxHP) playerHlth.currentHealth = startingHP; // Adds additional HP
+        else playerHlth.currentHealth = maxHP;
+        playerMove.dashSpeed += dashBonus; // Dash bonus
+        playerMove.dashTime += dashDist; // Dash distance
+        playerMove.gravity += gravReduct; // Gravity
     }
 }
