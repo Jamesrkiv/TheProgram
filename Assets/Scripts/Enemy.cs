@@ -24,7 +24,10 @@ public class Enemy : MonoBehaviour
 
     public Status status;
 
-    public int attackDistance = 4;
+    public int attackDistance = 2;
+    public int enemyDamage = 10;
+    public int knockback = 5;
+    private bool attacking = false;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,7 @@ public class Enemy : MonoBehaviour
         heightMultiplier = 1.36f;
         status = Enemy.Status.INVESTIGATE;
         anim = GetComponent<Animator>();
+        targetPlayer = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -68,7 +72,6 @@ public class Enemy : MonoBehaviour
             if(hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
-                targetPlayer = hit.collider.gameObject;
                 Debug.Log("Detected");
             }
         }
@@ -77,7 +80,6 @@ public class Enemy : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
-                targetPlayer = hit.collider.gameObject;
                 Debug.Log("Detected");
             }
         }
@@ -86,7 +88,6 @@ public class Enemy : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
-                targetPlayer = hit.collider.gameObject;
                 Debug.Log("Detected");
             }
         }
@@ -100,10 +101,32 @@ public class Enemy : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPlayer.transform.position) < attackDistance)
         {
             anim.SetBool("In range", true);
+            StartCoroutine(waitForAttack());
         }
         else
         {
             anim.SetBool("In range", false);
+            attacking = false;
+        }
+    }
+
+    IEnumerator waitForAttack()
+    {
+        attacking = true;
+        yield return new WaitForSeconds(0.5f);
+        attacking = false;
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(attacking && collision.collider.gameObject.CompareTag("Player"))
+        {
+            Vector3 direction = (transform.position - targetPlayer.transform.position).normalized;
+
+            targetPlayer.GetComponent<PlayerHealth>().currentHealth -= enemyDamage;
+
+            //targetPlayer.GetComponent<Rigidbody>().AddForce(direction * -knockback);
         }
     }
 }

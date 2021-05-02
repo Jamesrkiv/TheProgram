@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Level Transition &amp; Perks\perksMenu.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FirstPersonLook.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FirstPersonMove.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapons.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\TriggerEnable.cs" />
