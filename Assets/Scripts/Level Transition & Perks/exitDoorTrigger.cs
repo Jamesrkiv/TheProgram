@@ -26,11 +26,15 @@ public class exitDoorTrigger : MonoBehaviour
     private bool perkPicked = false;
     private perkTracker perks;
 
+    void OnEnable()
+    {
+        pTracker = GameObject.Find("PerkTracker");
+        perks = pTracker.GetComponent<perkTracker>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        perks = pTracker.GetComponent<perkTracker>();
-
         // Perk list
         possPerks[0] = "+10 HP";
         possPerks[1] = "+20 Max HP";
@@ -57,7 +61,7 @@ public class exitDoorTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter(Collider other)
