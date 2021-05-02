@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aba4549459c91441b007403599822d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 60
-  bulletDamage: 15
+  bulletSpeed: 75
+  bulletDamage: 7
   bulletDespawnTimer: 3
 --- !u!135 &6114800076359697557
 SphereCollider:
@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 5734452840854529161}
   - component: {fileID: 7097066493253936165}
   - component: {fileID: 4950582980735405454}
-  - component: {fileID: 5901836792696558622}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -202,17 +201,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &5901836792696558622
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9030673419076545815}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

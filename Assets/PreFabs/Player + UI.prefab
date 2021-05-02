@@ -970,6 +970,7 @@ MonoBehaviour:
   - {fileID: 138408, guid: a66d64962dad7b441b895147b3616981, type: 3}
   projectiles:
   - {fileID: 2977346654394215605, guid: cf04be92456063440b9dc2f3fa9fd9d5, type: 3}
+  - {fileID: 429345548622603826, guid: 58506f2e6321d2f42b28ea7d7e30cbe4, type: 3}
   ammoCount: 30
   maxAmmo: 30
   ammo: {fileID: 7336828425086872211}
