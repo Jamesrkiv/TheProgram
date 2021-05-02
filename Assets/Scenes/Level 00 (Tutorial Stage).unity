@@ -2928,9 +2928,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48cbc518c109b342b092824f64952dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
   investigateWait: 10
   heightMultiplier: 0
-  sightDist: 30
+  sightDist: 50
+  targetPlayer: {fileID: 0}
+  status: 0
 --- !u!1 &1255666061
 GameObject:
   m_ObjectHideFlags: 0

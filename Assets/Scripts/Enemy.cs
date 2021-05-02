@@ -5,31 +5,57 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    //Investigate
-    private Vector3 investigateSpot;
-    private float timer = 0;
-    public float investigateWait = 10;
+    private Animator anim;
+
+    public float speed = 10;
+    
 
     //Sight
     public float heightMultiplier;
     public float sightDist = 10;
-    
+
+    public GameObject targetPlayer;
+
+    public enum Status
+    {
+        INVESTIGATE,
+        ATTACK
+    }
+
+    public Status status;
     
     // Start is called before the first frame update
     void Start()
     {
         heightMultiplier = 1.36f;
+        status = Enemy.Status.INVESTIGATE;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        investigate();
+        StartCoroutine(enemyActions());
+    }
+
+    
+    IEnumerator enemyActions()
+    {
+        switch(status)
+        {
+            case Status.INVESTIGATE:
+                investigate();
+                break;
+
+            case Status.ATTACK:
+                attack();
+                break;
+        }
+        yield return null;
     }
 
     void investigate()
     {
-        timer += Time.deltaTime;
         RaycastHit hit;
         Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * sightDist, Color.green);
         Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized * sightDist, Color.green);
@@ -39,7 +65,8 @@ public class Enemy : MonoBehaviour
         {
             if(hit.collider.gameObject.tag == "Player")
             {
-                //state = enemy.State.CHASE;
+                status = Enemy.Status.ATTACK;
+                targetPlayer = hit.collider.gameObject;
                 Debug.Log("Detected");
             }
         }
@@ -47,7 +74,8 @@ public class Enemy : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                //state = enemy.State.CHASE;
+                status = Enemy.Status.ATTACK;
+                targetPlayer = hit.collider.gameObject;
                 Debug.Log("Detected");
             }
         }
@@ -55,9 +83,17 @@ public class Enemy : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                //state = enemy.State.CHASE;
+                status = Enemy.Status.ATTACK;
+                targetPlayer = hit.collider.gameObject;
                 Debug.Log("Detected");
             }
         }
+    }
+
+    void attack()
+    {
+        transform.LookAt(targetPlayer.transform.position);
+        transform.position += transform.forward * speed * Time.deltaTime;
+        anim.SetBool("See player", true);
     }
 }
