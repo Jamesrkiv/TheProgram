@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("See player", true);
         if (Vector3.Distance(transform.position, targetPlayer.transform.position) < attackDistance)
         {
-            enemyAudio.PlayOneShot(audioatk, 0.5f);
+            enemyAudio.PlayOneShot(audioatk, 0.1f);
             anim.SetBool("In range", true);
             StartCoroutine(waitForAttack());
         }

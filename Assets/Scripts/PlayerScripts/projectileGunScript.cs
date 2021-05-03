@@ -29,7 +29,7 @@ public class projectileGunScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             fireWeapon();
-            gunaudio.PlayOneShot(gunsound, .5f);
+            gunaudio.PlayOneShot(gunsound, .2f);
         }
     }
 
@@ -37,7 +37,7 @@ public class projectileGunScript : MonoBehaviour
     {
         if (gunBelt.ammoCount == 0)
         {
-            gunaudio.PlayOneShot(gunswap, 1.0f);
+            gunaudio.PlayOneShot(gunswap, .2f);
         }
         gunBelt.ammoCount -= 1;
         GameObject bullet = Instantiate(projectilePrefab, gunBarrel.transform.position, gunBarrel.transform.rotation);
