@@ -11,20 +11,33 @@ public class PlayerHealth : MonoBehaviour
     public Animator healthAni;
     //private Animator playerAnimator;
 
+    private FirstPersonLook playerMouse;
+    private FirstPersonMove playerWasd;
+
+    public GameObject player;
+
+    public GameObject gameOverMenu;
+
     // Start is called before the first frame update
     void Start()
     {
 
         //playerAnimator = GetComponent<Animator>();
+        playerMouse = player.GetComponent<FirstPersonLook>();
+        playerWasd = player.GetComponent<FirstPersonMove>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth < 0)
+        if (currentHealth =< 0)
         {
             currentHealth = 0;
             //playerAnimator.SetBool("isDead", true);
+            playerMouse.isPlaying = false;  // Kills player movement while menu open
+            playerWasd.canMove = false;
+
+            gameOverMenu.SetActive(true);
         }
 
         healthUI.text = "Health: " + currentHealth.ToString();
