@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
     public GameObject pm;
+    public Slider slide;
 
     private FirstPersonLook look;
     private bool menuOpen = false;
     private GameObject perkTrackr;
+    private AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
     {
+        sound = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
         perkTrackr = GameObject.Find("PerkTracker");
         pm.SetActive(false);
         look = GameObject.Find("Player").GetComponent<FirstPersonLook>();
@@ -22,6 +26,8 @@ public class pauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        sound.volume = 0.1f * slide.value;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (menuOpen)
