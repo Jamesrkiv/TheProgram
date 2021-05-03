@@ -26,7 +26,9 @@ public class Victoryscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(boss == null || boss.Length == 0)
+        boss = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (boss == null || boss.Length == 0)
         {
             pLook.isPlaying = false;
             vScreen.SetActive(true);
