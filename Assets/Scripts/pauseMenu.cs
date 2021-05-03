@@ -9,10 +9,12 @@ public class pauseMenu : MonoBehaviour
 
     private FirstPersonLook look;
     private bool menuOpen = false;
+    private GameObject perkTrackr;
 
     // Start is called before the first frame update
     void Start()
     {
+        perkTrackr = GameObject.Find("PerkTracker");
         pm.SetActive(false);
         look = GameObject.Find("Player").GetComponent<FirstPersonLook>();
     }
@@ -47,6 +49,7 @@ public class pauseMenu : MonoBehaviour
         menuOpen = false;
         Time.timeScale = 1;
         pm.SetActive(false);
+        Destroy(perkTrackr);
         SceneManager.LoadScene("MainMenu");
     }
 }
