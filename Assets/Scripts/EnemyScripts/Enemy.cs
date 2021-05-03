@@ -76,10 +76,11 @@ public class Enemy : MonoBehaviour
 
         if(Physics.Raycast (transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, sightDist))
         {
-            enemyAudio.PlayOneShot(audioidle, 0.1f);
+            //enemyAudio.PlayOneShot(audioidle, 0.1f);
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
+                enemyAudio.PlayOneShot(audioidle, 0.1f);
                 Debug.Log("Detected");
             }
         }
@@ -88,6 +89,7 @@ public class Enemy : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
+                enemyAudio.PlayOneShot(audioidle, 0.1f);
                 Debug.Log("Detected");
             }
         }
@@ -96,6 +98,7 @@ public class Enemy : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
+                enemyAudio.PlayOneShot(audioidle, 0.1f);
                 Debug.Log("Detected");
             }
         }
