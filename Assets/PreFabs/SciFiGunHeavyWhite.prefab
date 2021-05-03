@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f69f0a674839614b9f5c1936e42c44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2977346654394215605, guid: cf04be92456063440b9dc2f3fa9fd9d5,
+  projectilePrefab: {fileID: 429345548622603826, guid: 5470fdc6c7ce62f4a84c41e1cf40853d,
     type: 3}
   gunBarrel: {fileID: 1484042698940757981}
   debugLaser: 0

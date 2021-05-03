@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6224120143569191805}
   - component: {fileID: 8680931016466320914}
   m_Layer: 0
-  m_Name: bigBullet
+  m_Name: bigBullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aba4549459c91441b007403599822d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
-  bulletDamage: 20
+  bulletSpeed: 75
+  bulletDamage: 15
   bulletDespawnTimer: 3
 --- !u!135 &8680931016466320914
 SphereCollider:
@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 8233834635810030347}
   m_LocalRotation: {x: 0.7070044, y: -0.012032216, z: 0.012032216, w: 0.7070044}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 2, y: 0.1, z: 2}
   m_Children: []
   m_Father: {fileID: 1787739685645305461}
   m_RootOrder: 0
@@ -168,7 +168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e318ecb29444643f09e7c0d3dea07387, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
