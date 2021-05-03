@@ -71,6 +71,8 @@ public class perkTracker : MonoBehaviour
         playerMove = player.GetComponent<FirstPersonMove>();
         playerHlth = player.GetComponent<PlayerHealth>();
 
+        scoreInt += (int)playerHlth.currentHealth * 10;
+
         maxHP = 100 + hpBonus; // Changes max HP
         playerMove.speed += speedBonus; // Speed bonus
         if (startingHP <= maxHP) playerHlth.currentHealth = startingHP; // Adds additional HP
