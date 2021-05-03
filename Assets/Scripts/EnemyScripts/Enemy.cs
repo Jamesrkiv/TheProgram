@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
         {
             Vector3 direction = (transform.position - targetPlayer.transform.position).normalized;
 
-            targetPlayer.GetComponent<PlayerHealth>().currentHealth -= enemyDamage;
+            targetPlayer.GetComponent<PlayerHealth>().takeDamage(enemyDamage);
 
             //targetPlayer.GetComponent<Rigidbody>().AddForce(direction * -knockback);
         }
