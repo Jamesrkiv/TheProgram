@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,7 +9,12 @@ public class Enemy : MonoBehaviour
     private Animator anim;
 
     public float speed = 10;
-    
+
+    //Audio
+    private AudioSource enemyAudio;
+    public AudioClip audioidle;
+    public AudioClip audioatk;
+    public AudioClip audiodie;
 
     //Sight
     public float heightMultiplier;
@@ -36,6 +42,7 @@ public class Enemy : MonoBehaviour
         status = Enemy.Status.INVESTIGATE;
         anim = GetComponent<Animator>();
         targetPlayer = GameObject.FindWithTag("Player");
+        enemyAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -69,9 +76,11 @@ public class Enemy : MonoBehaviour
 
         if(Physics.Raycast (transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, sightDist))
         {
-            if(hit.collider.gameObject.tag == "Player")
+            //enemyAudio.PlayOneShot(audioidle, 0.1f);
+            if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
+                enemyAudio.PlayOneShot(audioidle, 0.1f);
                 Debug.Log("Detected");
             }
         }
@@ -80,6 +89,7 @@ public class Enemy : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
+                enemyAudio.PlayOneShot(audioidle, 0.1f);
                 Debug.Log("Detected");
             }
         }
@@ -88,6 +98,7 @@ public class Enemy : MonoBehaviour
             if (hit.collider.gameObject.tag == "Player")
             {
                 status = Enemy.Status.ATTACK;
+                enemyAudio.PlayOneShot(audioidle, 0.1f);
                 Debug.Log("Detected");
             }
         }
@@ -100,6 +111,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("See player", true);
         if (Vector3.Distance(transform.position, targetPlayer.transform.position) < attackDistance)
         {
+            enemyAudio.PlayOneShot(audioatk, 0.5f);
             anim.SetBool("In range", true);
             StartCoroutine(waitForAttack());
         }

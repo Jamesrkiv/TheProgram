@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class ButtonFunctions : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public GameObject gameOverMenu;
+
     void Start()
     {
 
@@ -25,5 +28,11 @@ public class ButtonFunctions : MonoBehaviour
     public void playGame()
     {
         SceneManager.LoadScene("LevelOne");
+    }
+
+    public void retunToMenu()
+    {
+        gameOverMenu.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 }
