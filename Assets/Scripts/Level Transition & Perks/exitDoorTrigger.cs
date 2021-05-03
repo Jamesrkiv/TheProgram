@@ -36,8 +36,8 @@ public class exitDoorTrigger : MonoBehaviour
     void Start()
     {
         // Perk list
-        possPerks[0] = "+10 HP";
-        possPerks[1] = "+20 Max HP";
+        possPerks[0] = "+50 HP";
+        possPerks[1] = "+30 Max HP";
         possPerks[2] = "- Gravity";
         possPerks[3] = "+ Gravity";
         possPerks[4] = "+ Dash Speed";
@@ -120,25 +120,25 @@ public class exitDoorTrigger : MonoBehaviour
         switch (powerupChose)
         {
             case "+10 HP":
-                perks.startingHP += 10;
+                perks.startingHP += 30;
                 break;
             case "+20 Max HP":
-                perks.hpBonus += 20;
+                perks.hpBonus += 50;
                 break;
             case "- Gravity":
-                perks.gravReduct -= 1;
+                perks.gravReduct -= 2;
                 break;
             case "+ Gravity":
-                perks.gravReduct += 1;
+                perks.gravReduct += 2;
                 break;
             case "+ Dash Speed":
-                perks.dashBonus += 1;
+                perks.dashBonus += 2;
                 break;
             case "+ Dash Distance":
-                perks.dashDist += 0.1f;
+                perks.dashDist += 0.2f;
                 break;
             case "+ Speed":
-                perks.speedBonus += 1;
+                perks.speedBonus += 2;
                 break;
             default:
                 Debug.Log("Error with perks");

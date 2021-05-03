@@ -32,7 +32,7 @@ public class perkTracker : MonoBehaviour
 
     private string refSceneName;    // For tracking the current scene
     private string sceneName;       // against the recorded name
-    private float maxHP = 100;
+    private float maxHP = 200;
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +73,7 @@ public class perkTracker : MonoBehaviour
 
         scoreInt += (int)playerHlth.currentHealth * 10;
 
-        maxHP = 100 + hpBonus; // Changes max HP
+        maxHP = 200 + hpBonus; // Changes max HP
         playerMove.speed += speedBonus; // Speed bonus
         if (startingHP <= maxHP) playerHlth.currentHealth = startingHP; // Adds additional HP
         else playerHlth.currentHealth = maxHP;
