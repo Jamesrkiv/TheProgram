@@ -417,7 +417,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -660,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6bb8e06650b3f4a8304cc9e29a84d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverMenu: {fileID: 0}
 --- !u!114 &1285365742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,6 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6bb8e06650b3f4a8304cc9e29a84d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverMenu: {fileID: 0}
 --- !u!114 &1898910917
 MonoBehaviour:
   m_ObjectHideFlags: 0
