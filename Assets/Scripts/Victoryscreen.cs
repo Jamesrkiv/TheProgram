@@ -1,31 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Victoryscreen : MonoBehaviour
 
     
 {
-    public GameObject boss;
+    public GameObject[] boss;
+    public GameObject player;
+    public GameObject vScreen;
+    public Text scre;
+    public Text RefScore;
 
-    public GameObject victoryText;
-
-    public GameObject victoryButton;
-
+    private FirstPersonLook pLook;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        boss = GameObject.FindGameObjectsWithTag("Enemy");
+        pLook = player.GetComponent<FirstPersonLook>();
+        scre.text = RefScore.text;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(boss == null)
+        if(boss == null || boss.Length == 0)
         {
-            victoryButton.SetActive(true);
-            victoryText.SetActive(true);
+            pLook.isPlaying = false;
+            vScreen.SetActive(true);
         }
     }
 }
