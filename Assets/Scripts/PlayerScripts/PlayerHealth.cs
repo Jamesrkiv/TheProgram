@@ -25,12 +25,16 @@ public class PlayerHealth : MonoBehaviour
         //playerAnimator = GetComponent<Animator>();
         playerMouse = player.GetComponent<FirstPersonLook>();
         playerWasd = player.GetComponent<FirstPersonMove>();
+        playerMouse.isPlaying = true;
+        playerWasd.canMove = true;
+
+        gameOverMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth =< 0)
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
             //playerAnimator.SetBool("isDead", true);

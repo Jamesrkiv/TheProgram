@@ -1395,7 +1395,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 654805707570068689}
-        m_MethodName: retunToMenu
+        m_MethodName: closeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
