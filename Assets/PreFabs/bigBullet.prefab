@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 5
-  bulletDamage: 20
+  bulletDamage: 15
   bulletDespawnTimer: 3
 --- !u!135 &8680931016466320914
 SphereCollider:

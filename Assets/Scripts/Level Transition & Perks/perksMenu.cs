@@ -45,9 +45,6 @@ public class perksMenu : MonoBehaviour
             case "LevelFour":
                 nextSceneName = "LevelFive";
                 break;
-            case "LevelFive":
-                nextSceneName = "FinalLevel";
-                break;
         }
     }
 }

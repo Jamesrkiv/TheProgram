@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6224120143569191805}
   - component: {fileID: 8680931016466320914}
   m_Layer: 0
-  m_Name: bigBullet 1
+  m_Name: pulseBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 75
-  bulletDamage: 15
+  bulletDamage: 5
   bulletDespawnTimer: 3
 --- !u!135 &8680931016466320914
 SphereCollider:
