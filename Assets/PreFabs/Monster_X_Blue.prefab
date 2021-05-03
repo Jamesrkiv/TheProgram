@@ -962,6 +962,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  audioidle: {fileID: 8300000, guid: 2cc46cabf96c30b41aee8de58bffee1c, type: 3}
+  audioatk: {fileID: 8300000, guid: 6f8efae2a70a9f54cbdb5dc8dd4e9fd7, type: 3}
+  audiodie: {fileID: 8300000, guid: 8b92e318fbedb1645b76497c2b958fcc, type: 3}
   heightMultiplier: 0
   sightDist: 65
   targetPlayer: {fileID: 0}
