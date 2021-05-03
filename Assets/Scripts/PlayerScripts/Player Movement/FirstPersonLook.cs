@@ -25,12 +25,15 @@ public class FirstPersonLook : MonoBehaviour
     {
         if (isPlaying) Cursor.lockState = CursorLockMode.Locked; // Locks the mouse
         else Cursor.lockState = CursorLockMode.None;
+        
+        if (isPlaying)
+        {
+            rotation.y += Input.GetAxis("Mouse X");
+            rotation.x += -Input.GetAxis("Mouse Y");
 
-        rotation.y += Input.GetAxis("Mouse X");
-        rotation.x += -Input.GetAxis("Mouse Y");
-
-        rotation.x = Mathf.Clamp(rotation.x, -15f, 15f);
-        transform.eulerAngles = new Vector2(0, rotation.y) * lookSpeed;
-        Camera.main.transform.localRotation = Quaternion.Euler(rotation.x * lookSpeed, 0, 0);
+            rotation.x = Mathf.Clamp(rotation.x, -15f, 15f);
+            transform.eulerAngles = new Vector2(0, rotation.y) * lookSpeed;
+            Camera.main.transform.localRotation = Quaternion.Euler(rotation.x * lookSpeed, 0, 0);
+        }
     }
 }

@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &25136174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7336828425507914321, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
-    type: 3}
-  m_PrefabInstance: {fileID: 2095278971}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &64278391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,12 +2093,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f887c8f9289447895ae8a07be226ec, type: 3}
---- !u!20 &778773182 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7336828424828136895, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
-    type: 3}
-  m_PrefabInstance: {fileID: 2095278971}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &781182981 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7129966770800877577, guid: 72cabfaee8780c449848825c0ee8479b,
@@ -2585,7 +2573,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fps_Cam
       value: 
-      objectReference: {fileID: 778773182}
+      objectReference: {fileID: 7336828426763749060}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3de438e70702ebf428d028c739828f43, type: 3}
 --- !u!1 &939586219
@@ -2987,7 +2975,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fps_Cam
       value: 
-      objectReference: {fileID: 778773182}
+      objectReference: {fileID: 7336828426763749060}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3de438e70702ebf428d028c739828f43, type: 3}
 --- !u!1 &1255666061
@@ -5107,10 +5095,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1312418436, guid: e2f4a5d6f70f92e4ebf8d772b7818a14, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7336828424841605448, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -5170,16 +5154,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player + UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336828425135037624, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336828425710478024, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f4a5d6f70f92e4ebf8d772b7818a14, type: 3}
@@ -5304,7 +5278,7 @@ PrefabInstance:
     - target: {fileID: 687014406, guid: 72cabfaee8780c449848825c0ee8479b, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 25136174}
+      objectReference: {fileID: 7336828425979570474}
     - target: {fileID: 7129966769494443328, guid: 72cabfaee8780c449848825c0ee8479b,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5417,6 +5391,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72cabfaee8780c449848825c0ee8479b, type: 3}
+--- !u!1 &7336828425979570474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7336828425507914321, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+    type: 3}
+  m_PrefabInstance: {fileID: 2095278971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &7336828426763749060 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7336828424828136895, guid: e2f4a5d6f70f92e4ebf8d772b7818a14,
+    type: 3}
+  m_PrefabInstance: {fileID: 2095278971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7976910216885589912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5451,7 +5437,7 @@ PrefabInstance:
     - target: {fileID: 252882591, guid: 75479ed3aa90b9e4cbd685dc14e2e8ff, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 25136174}
+      objectReference: {fileID: 7336828425979570474}
     - target: {fileID: 252882591, guid: 75479ed3aa90b9e4cbd685dc14e2e8ff, type: 3}
       propertyPath: pTracker
       value: 
@@ -5463,7 +5449,7 @@ PrefabInstance:
     - target: {fileID: 924502535, guid: 75479ed3aa90b9e4cbd685dc14e2e8ff, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 25136174}
+      objectReference: {fileID: 7336828425979570474}
     - target: {fileID: 7976910216668945822, guid: 75479ed3aa90b9e4cbd685dc14e2e8ff,
         type: 3}
       propertyPath: m_Name
