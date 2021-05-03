@@ -4211,6 +4211,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5375322199819759434, guid: cd4840ca0462e4f41a8cc708df5348a0,
+        type: 3}
+      propertyPath: fps_Cam
+      value: 
+      objectReference: {fileID: 1911478569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd4840ca0462e4f41a8cc708df5348a0, type: 3}
 --- !u!1 &901234406
@@ -9504,7 +9509,7 @@ Transform:
   - {fileID: 473197924}
   - {fileID: 109621253}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070812402
 GameObject:
